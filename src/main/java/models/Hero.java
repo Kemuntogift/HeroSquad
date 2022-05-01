@@ -4,10 +4,12 @@ public class Hero {
     private String name;
     private int age;
     private String power;
+    private String weakness;
     public Hero(String name, Integer age, String power, String weakness) {
         this.name = name;
         this.age = age;
         this.power = power;
+        this.weakness = weakness;
 
     }
 
@@ -25,5 +27,9 @@ public class Hero {
 
     public String getPower() {
         return this.power;
+    }
+
+    public String getWeakness() {
+        return this.weakness;
     }
 }

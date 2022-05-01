@@ -35,4 +35,10 @@ class HeroTest {
         Hero newHero = Hero.createNewHero();
         assertEquals("Retractable claws",newHero.getPower());
     }
+
+    @Test
+    public void newHero_getWeakness_String() {
+        Hero newHero = Hero.createNewHero();
+        assertEquals("laser pointers",newHero.getWeakness());
+    }
 }
