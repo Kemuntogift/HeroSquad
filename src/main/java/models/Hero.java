@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Hero {
     private String name;
     private int age;
@@ -32,4 +34,8 @@ public class Hero {
     public String getWeakness() {
         return this.weakness;
     }
+    public static ArrayList<Hero> getAllInstances() {
+        return instances;
+    }
+    public static void clearAllHeroes(){instances.clear();}
 }
