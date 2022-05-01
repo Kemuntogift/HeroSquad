@@ -37,5 +37,7 @@ public class Hero {
     public static ArrayList<Hero> getAllInstances() {
         return instances;
     }
-    public static void clearAllHeroes(){instances.clear();}
+    public static void clearAllHeroes(){
+        instances.clear();
+    }
 }

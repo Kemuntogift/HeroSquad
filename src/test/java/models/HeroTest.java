@@ -1,5 +1,6 @@
 package models;
 
+import org.junit.After;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,5 +41,9 @@ class HeroTest {
     public void newHero_getWeakness_String() {
         Hero newHero = Hero.createNewHero();
         assertEquals("laser pointers",newHero.getWeakness());
+    }
+    @After
+    public void tearDown() {
+        Hero.clearAllHeroes(); //clear out all the posts before each test.
     }
 }
