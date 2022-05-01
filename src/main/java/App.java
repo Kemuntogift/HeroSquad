@@ -27,5 +27,18 @@ public class App {
             model.put("hero",hero);
             return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
+
+        post("/new/hero",(request, response) ->{
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            Integer age = Integer.parseInt(request.queryParams("age"));
+            String power = request.queryParams("power");
+            String weakness = request.queryParams("weakness");
+            Hero newHero = new Hero(name,age,power,weakness);
+            request.session().attribute("element",name);
+            model.put("element",request.session().attribute("element"));
+            model.put("newHero",newHero);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
