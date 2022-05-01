@@ -1,0 +1,22 @@
+{{#partial "content"}}
+    <div id="hero" class="card">
+        <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/627270/4ea1f5587e95ede8fbd1451706ee7fb40487f7b1.jpg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="heroes">
+                {{#each hero}}
+                    <div class="hero-item">
+                        <p>Name: {{ name }} </p>
+                        <p>Age: {{ age }}</p>
+                        <p>Power: {{ power }}</p>
+                        <p>Weakness: {{ weakness }}</p>
+                        <p>Id: {{ id }}</p>
+                        <a href="/squad" class="btns">Add {{ name }} To Squad</a>
+                    </div>
+
+                {{/each}}
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
