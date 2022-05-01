@@ -12,5 +12,9 @@ class HeroTest {
         assertTrue(testHero instanceof Hero);
     }
 
-
+    @Test
+    public void newHero_methodInstantiatesCorrectly_true() {
+        Hero newHero = Hero.createNewHero();
+        assertTrue(newHero instanceof Hero);
+    }
 }
