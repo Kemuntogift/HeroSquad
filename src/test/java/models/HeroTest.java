@@ -62,4 +62,17 @@ class HeroTest {
         Hero otherHero = Hero.createNewHero();
         assertEquals(2,otherHero.getId());
     }
+
+    @Test
+    public void findReturnsCorrectHero() throws Exception {
+        Hero newHero = Hero.createNewHero();
+        assertEquals(1, Hero.findById(newHero.getId()).getId());
+    }
+
+    @Test
+    public void findReturnsCorrectPostWhenMoreThanOnePostExists() throws Exception {
+        Hero newHero = Hero.createNewHero();
+        Hero otherHero = Hero.createNewHero();
+        assertEquals(2, Hero.findById(otherHero.getId()).getId());
+    }
 }

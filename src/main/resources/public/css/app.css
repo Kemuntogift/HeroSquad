@@ -20,3 +20,27 @@
   border-radius: 20px;
   margin-top: 5px;
    }
+
+ .form{
+
+   width: 500px;
+   margin-top: 15px;
+
+ }
+ .form>h1{
+   color: white;
+
+ }
+ .form>input[type=text],
+ .form>input[type=number]{
+   background: none;
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   border: none;
+   border-bottom: 1px solid white;
+   color: white;
+   outline: none;
+   display: block;
+
+ }
