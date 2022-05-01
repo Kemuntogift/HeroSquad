@@ -1,0 +1,20 @@
+{{#partial "content"}}
+    <div id="hero" class="card">
+        <img src="https://images.wallpapersden.com/image/download/catwoman-injustice-2_a21qZWqUmZqaraWkpJRoZ2prrWZtaGY.jpg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="hero-text text-center">
+                <form class="form" action="/new/hero" method="post">
+                    <h1>Create Your Hero</h1>
+                    <input type="text" placeholder="Hero's name" name="name" required>
+                    <input type="number" placeholder="Hero's age" name="age" required>
+                    <input type="text" placeholder="Hero's powers" name="power" required>
+                    <input type="text" placeholder="Hero's weakness" name="weakness" required>
+
+                    <input class="btn" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
