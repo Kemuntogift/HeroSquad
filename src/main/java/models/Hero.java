@@ -3,9 +3,11 @@ package models;
 public class Hero {
     private String name;
     private int age;
+    private String power;
     public Hero(String name, Integer age, String power, String weakness) {
         this.name = name;
         this.age = age;
+        this.power = power;
 
     }
 
@@ -19,5 +21,9 @@ public class Hero {
 
     public int getAge() {
         return this.age;
+    }
+
+    public String getPower() {
+        return this.power;
     }
 }
