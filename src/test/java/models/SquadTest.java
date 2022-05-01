@@ -32,6 +32,14 @@ class SquadTest {
     @Test
     public void newSquad_getCause_String() {
         Squad newSquad = Squad.createNewSquad();
-        assertEquals("Infinity Stone",newSquad.getCause());
+        assertEquals("Crime fighting",newSquad.getCause());
+    }
+
+    @Test
+    public void newSquad_getInstances_true() {
+        Squad newSquad = Squad.createNewSquad();
+        Squad otherSquad = Squad.createNewSquad();
+        assertTrue(Squad.getInstances().contains(newSquad));
+        assertTrue(Squad.getInstances().contains(otherSquad));
     }
 }
