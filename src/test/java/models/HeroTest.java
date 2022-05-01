@@ -44,6 +44,14 @@ class HeroTest {
     }
     @After
     public void tearDown() {
-        Hero.clearAllHeroes(); //clear out all the posts before each test.
+        Hero.clearAllHeroes(); //clear out all the heroes before each test.
+    }
+
+    @Test
+    public void newHero_getAllInstances_true() {
+        Hero newHero = Hero.createNewHero();
+        Hero otherHero = Hero.createNewHero();
+        assertTrue(Hero.getAllInstances().contains(newHero));
+        assertTrue(Hero.getAllInstances().contains(otherHero));
     }
 }
