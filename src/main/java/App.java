@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import models.Hero;
+import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import static spark.Spark.*;
@@ -39,6 +40,33 @@ public class App {
             model.put("element",request.session().attribute("element"));
             model.put("newHero",newHero);
             return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/squad-form",(request, response) ->{
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "squad-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/squad",(request, response) ->{
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Squad> squads = Squad.getInstances();
+            model.put("squads",squads);
+            ArrayList<Hero> members = Hero.getAllInstances();
+            model.put("heroes",members);
+            Squad newSquad = Squad.findBySquadId(1);
+            model.put("allSquadMembers", newSquad.getSquadMembers());
+            return new ModelAndView(model, "squad.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/squad/new",(req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            String squadName = req.queryParams("squadName");
+            int squadSize = Integer.parseInt(req.queryParams("squadSize"));
+            String cause = req.queryParams("cause");
+            Squad newSquad = new Squad(squadName,squadSize,cause);
+            req.session().attribute("element",squadName);
+            model.put("element",req.session().attribute("element"));
+            return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
