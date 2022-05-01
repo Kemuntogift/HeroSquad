@@ -12,5 +12,10 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model,"index.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/hero-form",(request, response) ->{
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "hero-form.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
