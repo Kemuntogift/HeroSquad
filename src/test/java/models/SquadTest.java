@@ -1,5 +1,6 @@
 package models;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -36,10 +37,15 @@ class SquadTest {
     }
 
     @Test
-    public void newSquad_getInstances_true() {
+    public void newSquad_getAllInstances_true() {
         Squad newSquad = Squad.createNewSquad();
         Squad otherSquad = Squad.createNewSquad();
         assertTrue(Squad.getInstances().contains(newSquad));
         assertTrue(Squad.getInstances().contains(otherSquad));
+    }
+
+    @AfterAll
+    public void tearDown() {
+        Squad.clearAllSquadMembers(); //clear out all the squad members before each test.
     }
 }

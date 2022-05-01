@@ -70,7 +70,7 @@ class HeroTest {
     }
 
     @Test
-    public void findReturnsCorrectPostWhenMoreThanOnePostExists() throws Exception {
+    public void findReturnsCorrectHeroWhenMoreThanOneHeroExists() throws Exception {
         Hero newHero = Hero.createNewHero();
         Hero otherHero = Hero.createNewHero();
         assertEquals(2, Hero.findById(otherHero.getId()).getId());

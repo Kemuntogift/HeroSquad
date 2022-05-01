@@ -28,4 +28,7 @@ public class Squad {
         return this.cause;
     }
     public static ArrayList<Squad> getInstances(){return instances;}
+    public static void clearAllSquadMembers(){
+        instances.clear();
+    }
 }
