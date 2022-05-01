@@ -54,4 +54,12 @@ class HeroTest {
         assertTrue(Hero.getAllInstances().contains(newHero));
         assertTrue(Hero.getAllInstances().contains(otherHero));
     }
+
+    @Test
+    public void getId_heroesInstantiateWithAnId_1() throws Exception{
+        Hero.clearAllHeroes();
+        Hero newHero = Hero.createNewHero();
+        Hero otherHero = Hero.createNewHero();
+        assertEquals(2,otherHero.getId());
+    }
 }
