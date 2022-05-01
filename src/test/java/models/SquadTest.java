@@ -16,4 +16,22 @@ class SquadTest {
         Squad newSquad = Squad.createNewSquad();
         assertTrue(newSquad instanceof Squad);
     }
+
+    @Test
+    public void newSquad_getName_String() {
+        Squad newSquad = Squad.createNewSquad();
+        assertEquals("Teen Titans",newSquad.getSquadName());
+    }
+
+    @Test
+    public void newSquad_getSize_Int() {
+        Squad newSquad = Squad.createNewSquad();
+        assertEquals(5,newSquad.getSquadSize());
+    }
+
+    @Test
+    public void newSquad_getCause_String() {
+        Squad newSquad = Squad.createNewSquad();
+        assertEquals("Infinity Stone",newSquad.getCause());
+    }
 }
