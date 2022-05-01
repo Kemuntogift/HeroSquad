@@ -23,4 +23,10 @@ class HeroTest {
         Hero newHero = Hero.createNewHero();
         assertEquals("Catwoman",newHero.getName());
     }
+
+    @Test
+    public void newHero_getAge_Integer() {
+        Hero newHero = Hero.createNewHero();
+        assertEquals(27,newHero.getAge());
+    }
 }
