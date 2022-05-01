@@ -10,3 +10,13 @@
  .hero-text {
  color: white;
   }
+
+  .btn{
+  color:
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+  border-radius: 20px;
+  margin-top: 5px;
+   }
