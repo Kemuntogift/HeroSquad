@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
  body {
  margin: 0;
@@ -12,7 +14,7 @@
   }
 
   .btn{
-  color:
+
   border: none;
   cursor: pointer;
   outline: none;
@@ -44,3 +46,18 @@
    display: block;
 
  }
+ .listbtn{
+   color:
+   border: none;
+   cursor: pointer;
+   outline: none;
+   padding: 5px;
+   border-radius: 10px;
+   margin-top: 5px;
+    }
+  .success>h3{
+  color: #01FFFF;
+  }
+  .heroes{
+  color: #01FFFF;
+  }

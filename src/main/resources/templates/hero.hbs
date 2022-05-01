@@ -11,11 +11,13 @@
                         <p>Power: {{ power }}</p>
                         <p>Weakness: {{ weakness }}</p>
                         <p>Id: {{ id }}</p>
-                        <a href="/squad" class="btns">Add {{ name }} To Squad</a>
+                        <a href="/squad"><button class="listbtn btn-primary">Add {{ name }} To Squad</button></a>
+                        <a href="/hero-form"><button class="listbtn btn-primary">Create Another Hero</button></a>
                     </div>
 
                 {{/each}}
             </div>
+
         </div>
     </div>
 {{/partial}}

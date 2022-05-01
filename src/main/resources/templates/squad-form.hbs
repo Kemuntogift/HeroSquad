@@ -1,0 +1,18 @@
+{{#partial "content"}}
+    <div id="hero" class="card">
+        <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/35140/01143d2c73f5857d00025db4cfcb05b9f1e34a0f.jpg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="hero-text text-center">
+                <form class="form" action="/squad/new" method="post">
+                    <h1>Create Your Squad</h1>
+                    <input type="text" placeholder="Enter the squad name" name="squadName" required>
+                    <input type="number" placeholder="Enter the max size" name="size" required>
+                    <input type="text" placeholder="Enter mission" name="cause" required>
+                    <input type="submit" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
