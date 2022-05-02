@@ -60,4 +60,19 @@
   }
   .heroes{
   color: #01FFFF;
+  text-align: center;
+  width: 100%;
+  }
+
+  .hero-item{
+    width: 500px;
+    max-width: 90%;
+    margin: 2% 3%;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    padding: 10px;
+    padding-left: 60px;
+
   }
