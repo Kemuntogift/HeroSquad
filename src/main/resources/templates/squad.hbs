@@ -1,0 +1,44 @@
+{{#partial "content"}}
+    <div id="hero" class="card">
+        <img src="/images/blankmiddle.jpg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="hero-text text-center">
+            <h2>
+                <a href="/squad-form"><button class="listbtn btn-primary">Create A Squad</button></a>
+                <br><br>
+                {{#if squads}}
+                    HERE ARE YOUR SQUADS
+                </h2>
+                    {{#each squads}}
+                        <div class="squads">
+                            <img src="" alt="">
+                            <div>
+                                <h1>{{ squadName }} </h1>
+                                <p>Purpose: {{cause}}</p>
+                                <p>Max participants: {{ squadSize }}</p>
+                                <br><br>
+                                <h3>MEMBERS</h3>
+                                <button class="addMember add-btn" >Add New Member</button>
+                                {{#each squadMembers}}
+                                    <div class="members">
+                                        <h5>Name: {{name}}</h5>
+                                        <h5>Power: {{power}}</h5>
+                                        <h5>Weakness: {{weakness}}</h5>
+                                    </div>
+                                {{/each}}
+
+
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    <h2>Create a squad to continue</h2>
+                {{/if}}
+            </div>
+
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
