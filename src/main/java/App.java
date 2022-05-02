@@ -58,14 +58,14 @@ public class App {
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/squad/new",(req,res)-> {
+        post("/squad/new",(request,response)-> {
             Map<String, Object> model = new HashMap<>();
-            String squadName = req.queryParams("squadName");
-            int squadSize = Integer.parseInt(req.queryParams("squadSize"));
-            String cause = req.queryParams("cause");
+            String squadName = request.queryParams("squadName");
+            int squadSize = Integer.parseInt(request.queryParams("squadSize"));
+            String cause = request.queryParams("cause");
             Squad newSquad = new Squad(squadName,squadSize,cause);
-            req.session().attribute("element",squadName);
-            model.put("element",req.session().attribute("element"));
+            request.session().attribute("element",squadName);
+            model.put("element",request.session().attribute("element"));
             return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
     }
