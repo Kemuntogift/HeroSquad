@@ -5,14 +5,13 @@
 <!-- add member to squad-->
             <div class="hero-text text-center">
                 <div id="newmember">
-                    <p class="close">&cross;</p>
                     <h2>Choose Squad Members</h2>
                     {{#each heroes}}
                         <div class="hero-element">
                             <div class="hero-details">
                                 <p>Name: {{name}}</p>
                                 <p>Super power: {{ power }}</p>
-                                <a href="/squad/new/{{id}}">Add To Squad</a>
+                                <a href="/squad/new/{{id}}">Add To A Squad</a>
                             </div>
                         </div>
                     {{/each}}

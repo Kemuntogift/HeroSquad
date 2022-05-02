@@ -68,5 +68,14 @@ public class App {
             model.put("element",request.session().attribute("element"));
             return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
+
+        //put hero to squad and get success message
+        get("/new/member/:squadId",(req,res)->{
+            Map<String, Object> model = new HashMap<>();
+            req.session().attribute("chosenSquad",req.params("squadId"));
+            model.put("chosenSquad", req.session().attribute("chosenSquad"));
+            model.put("element",1);
+            return new ModelAndView(model, "success.hbs");
+        },new HandlebarsTemplateEngine());
     }
 }
