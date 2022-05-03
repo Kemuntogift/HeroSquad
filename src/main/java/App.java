@@ -67,7 +67,7 @@ public class App {
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/squad/new",(request,response)-> {
+        post("/new/squad",(request,response)-> {
             Map<String, Object> model = new HashMap<>();
             String squadName = request.queryParams("squadName");
             int squadSize = Integer.parseInt(request.queryParams("squadSize"));

@@ -3,31 +3,10 @@
         <img src="/images/blankmiddle.jpg" class="img-fluid ">
         <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
 
-
-<!-- add member to squad-->
-            <div class="hero-text text-center">
-                <div id="newmember">
-                    <h2>Choose Squad Members</h2>
-                    {{#each heroes}}
-                        <div class="hero-element">
-                            <div class="hero-details">
-                                <p>Name: {{name}}</p>
-                                <p>Super power: {{ power }}</p>
-                                <a href="/squad/new/{{id}}">Add To A Squad</a>
-                            </div>
-                        </div>
-                    {{/each}}
-                </div>
-
-                <a href="/squad-form"><button class="listbtn btn-primary">Create A Squad</button></a>
-                <br><br>
                 <!--show squads-->
                 {{#if squads}}
                   <h2>  HERE ARE YOUR SQUADS</h2>
                     {{#each squads}}
-                        <div class="squads">
-                            <img src="" alt="">
-                            <div>
                                 <h1>{{ squadName }} </h1>
                                 <p>Purpose: {{cause}}</p>
                                 <p>Number of members: {{ squadSize }}</p>
@@ -43,16 +22,14 @@
                                 {{/each}}
 
 
-                            </div>
-                        </div>
                     {{/each}}
                 {{else}}
                     <h2>Create a squad to continue</h2>
+                    <a href="/squad-form"><button class="listbtn btn-primary">Create A Squad</button></a>
                 {{/if}}
             </div>
 
-            </div>
+
         </div>
-    </div>
 {{/partial}}
 {{> layout.hbs}}
