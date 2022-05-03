@@ -1,0 +1,24 @@
+{{#partial "content"}}
+    <div id="hero" class="card">
+        <img src="/images/hero-left1.jpg" class="img-fluid ">
+        <div class="card-img-overlay   d-flex flex-column align-items-center justify-content-center">
+
+            <div class="heroes">
+                {{#each hero}}
+                    <div class="hero-item">
+                        <p>Name: {{ name }} </p>
+                        <p>Age: {{ age }}</p>
+                        <p>Power: {{ power }}</p>
+                        <p>Weakness: {{ weakness }}</p>
+                        <p>Id: {{ id }}</p>
+                        <a href="/squad"><button class="listbtn btn-primary">Add {{ name }} To Squad</button></a>
+                        <a href="/hero-form"><button class="listbtn btn-primary">Create Another Hero</button></a>
+                    </div>
+
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

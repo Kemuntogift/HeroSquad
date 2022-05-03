@@ -84,8 +84,6 @@
 
   }
   .nav-hr{
-    border: 0.3px solid rgb(48, 116, 52);
-    box-shadow: 0 0 5px rgb(115, 124, 110);
     position: absolute;
     width: 100%;
     top: 45px;
@@ -95,7 +93,6 @@
     position: absolute;
     top: 23px;
     right: 10%;
-    background: rgb(8, 22, 8);
   }
   nav>ul li{
     display: inline-block;
