@@ -75,6 +75,7 @@ public class App {
             Squad newSquad = new Squad(squadName,squadSize,cause);
             request.session().attribute("element",squadName);
             model.put("element",request.session().attribute("element"));
+            model.put("newSquad",newSquad);
             return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
 
