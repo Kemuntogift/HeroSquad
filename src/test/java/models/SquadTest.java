@@ -1,6 +1,5 @@
 package models;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,7 +46,7 @@ class SquadTest {
    // @AfterAll
     //public void tearDown() {
       //  Squad.clearAllSquadMembers(); //clear out all the squad members before each test.
-   // }
+   //
 
     @Test
     public void newSquad_getSquadMembers_Array() {
