@@ -1,6 +1,7 @@
 # HeroSquad
 This app allows you to recruit a well-balanced team of superheroes.
 
+[![screenshot-from-2022-05-05-11-16-42.png](https://i.postimg.cc/cHxkvF5P/screenshot-from-2022-05-05-11-16-42.png)](https://postimg.cc/NynkVktx)
 
 ## Description
 
